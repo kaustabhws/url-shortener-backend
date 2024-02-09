@@ -23,7 +23,7 @@ router.post('/shorten', async (req, res) => {
             shortenedUrl: shortUrl
         });
 
-        res.json({ success: true, shortUrl: `https://short-back33-758faa2111ea.herokuapp.com/${shortPath}` })
+        res.json({ success: true, shortUrl })
     } catch (error) {
         res.json({success: false})
     }
