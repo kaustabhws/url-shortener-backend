@@ -6,7 +6,7 @@ router.get('/redirect/:shortPath', async (req, res) => {
     try {
         const { shortPath } = req.params;
 
-        const shortUrl = `http://localhost:3000/${shortPath}`
+        const shortUrl = `https://short-back33-758faa2111ea.herokuapp.com/${shortPath}`
 
         let originalUrl = await Url.findOne({ 'shortenedUrl': shortUrl})
 

@@ -16,14 +16,14 @@ router.post('/shorten', async (req, res) => {
         const { originalUrl } = req.body;
 
         const shortPath = generateRandomString(8);
-        const shortUrl = `http://localhost:5000/${shortPath}`
+        const shortUrl = `https://short-back33-758faa2111ea.herokuapp.com/${shortPath}`
 
         user = await Url.create({
             originalUrl: originalUrl,
             shortenedUrl: shortUrl
         });
 
-        res.json({ success: true, shortUrl: `http://localhost:5000/${shortPath}` })
+        res.json({ success: true, shortUrl: `https://short-back33-758faa2111ea.herokuapp.com/${shortPath}` })
     } catch (error) {
         res.json({success: false})
     }
