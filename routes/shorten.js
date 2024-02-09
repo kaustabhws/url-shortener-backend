@@ -16,7 +16,7 @@ router.post('/shorten', async (req, res) => {
         const { originalUrl } = req.body;
 
         const shortPath = generateRandomString(8);
-        const shortUrl = `https://short-back33-758faa2111ea.herokuapp.com/${shortPath}`
+        const shortUrl = `http://localhost:3000/${shortPath}`
 
         user = await Url.create({
             originalUrl: originalUrl,
